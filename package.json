@@ -1,0 +1,21 @@
+{
+  "name": "develup",
+  "description": "Setup commands for web development tools by kazaoki.",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": false,
+  "bin": {
+    "develup": "dist/develup"
+  },
+  "scripts": {
+    "dev": "npx parcel watch src/develup.js --out-dir dist --out-file develup --target node --no-source-maps",
+    "build": "npx parcel build src/develup.js --out-dir dist --out-file develup --target node --no-source-maps --no-cache && node src/build-after.js"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.7.1"
+  },
+  "dependencies": {
+    "cli-color": "^1.2.0",
+    "optimist": "^0.6.1"
+  }
+}
